@@ -1,0 +1,21 @@
+2024-05-23 14:27:39.852 [36717] DEBUG VimShortcuts::Application - Replaced Rails logger with Hatchet
+2024-05-23 14:27:39.852 [36717] DEBUG VimShortcuts::Application - Replacing ActionDispatch::LogSubscriber logger with Hatchet
+2024-05-23 14:27:39.852 [36717] DEBUG VimShortcuts::Application - Replacing Rails asset logger with Hatchet
+2024-05-23 14:27:43.019 [36726] DEBUG VimShortcuts::Application - Replaced Rails logger with Hatchet
+2024-05-23 14:27:43.019 [36726] DEBUG VimShortcuts::Application - Replacing ActionDispatch::LogSubscriber logger with Hatchet
+2024-05-23 14:27:43.019 [36726] DEBUG VimShortcuts::Application - Replacing Rails asset logger with Hatchet
+2024-05-23 14:27:45.214 [36733] DEBUG VimShortcuts::Application - Replaced Rails logger with Hatchet
+2024-05-23 14:27:45.215 [36733] DEBUG VimShortcuts::Application - Replacing ActionDispatch::LogSubscriber logger with Hatchet
+2024-05-23 14:27:45.215 [36733] DEBUG VimShortcuts::Application - Replacing Rails asset logger with Hatchet
+2024-05-23 14:27:45.471 [36733] DEBUG Cronofy::SequelLogger - (0.000262s) PRAGMA foreign_keys = 1
+2024-05-23 14:27:45.471 [36733] DEBUG Cronofy::SequelLogger - (0.000008s) PRAGMA case_sensitive_like = 1
+2024-05-23 14:27:45.471 [36733] DEBUG Cronofy::SequelLogger - (0.000287s) SELECT sqlite_version()
+2024-05-23 14:27:45.471 [36733] DEBUG Cronofy::SequelLogger - SQLite3::SQLException: no such table: schema_migrations: SELECT NULL AS 'nil' FROM `schema_migrations` LIMIT 1
+2024-05-23 14:27:45.485 [36733] DEBUG Cronofy::SequelLogger - (0.012889s) CREATE TABLE `schema_migrations` (`filename` varchar(255) NOT NULL PRIMARY KEY)
+2024-05-23 14:27:45.485 [36733] DEBUG Cronofy::SequelLogger - SQLite3::SQLException: no such table: schema_info: SELECT NULL AS 'nil' FROM `schema_info` LIMIT 1
+2024-05-23 14:27:45.485 [36733] DEBUG Cronofy::SequelLogger - (0.000023s) SELECT `filename` FROM `schema_migrations` ORDER BY `filename`
+2024-05-23 14:27:45.531 [36733] DEBUG Cronofy::SequelLogger - Begin applying migration 202401010000_create_entity_store.rb, direction: up
+2024-05-23 14:27:45.555 [36733] DEBUG Cronofy::SequelLogger - (0.023198s) CREATE TABLE `entities` (`id` char(24) NOT NULL PRIMARY KEY, `_type` text NOT NULL, `version` integer, `snapshot_key` integer, `snapshot` jsonb)
+2024-05-23 14:27:45.578 [36733] DEBUG Cronofy::SequelLogger - (0.023214s) CREATE TABLE `entity_events` (`id` char(24) NOT NULL PRIMARY KEY, `_type` text NOT NULL, `_entity_id` char(24) NOT NULL, `entity_version` integer, `snapshot` jsonb, `at` timestamp)
+2024-05-23 14:27:45.602 [36733] DEBUG Cronofy::SequelLogger - (0.023552s) INSERT INTO `schema_migrations` (`filename`) VALUES ('202401010000_create_entity_store.rb')
+2024-05-23 14:27:45.602 [36733] DEBUG Cronofy::SequelLogger - Finished applying migration 202401010000_create_entity_store.rb, direction: up, took 0.070829 seconds
