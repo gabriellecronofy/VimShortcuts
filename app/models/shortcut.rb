@@ -10,6 +10,8 @@ class Shortcut
       by: by,
       shortcut_name: shortcut_name,
     )
+
+    shortcut
   end
 
   def created_at=(value)
