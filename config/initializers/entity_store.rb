@@ -7,9 +7,6 @@
 
       [:debug, :info, :warn, :error, :fatal].each do |level|
         define_method(level) do |message, &block|
-          if [:error, :fatal].include?(level)
-            Telemetry.add_field("entity_store.error", true)
-          end
           log.add(level, message, &block)
         end
       end
