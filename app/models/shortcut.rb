@@ -1,7 +1,7 @@
 require "entity_store"
 
 class Shortcut
-  include Entity
+  include Cronofy::Entity
 
   def self.create(by, at1, shortcut, shortcut_name)
     shortcut = Shortcut.new
@@ -25,7 +25,7 @@ class Shortcut
   end
 
   class ShortcutCreated
-    include EntityEvent
+    include Cronofy::EntityEvent
 
     attr_accessor :at2, :by, :shortcut_name
 

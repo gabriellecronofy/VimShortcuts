@@ -1,6 +1,4 @@
-
-  vendor/*
-  *.db
-  tmp/*
-  logs/*
-  
+vendor/*
+*.db
+tmp/*
+logs/*

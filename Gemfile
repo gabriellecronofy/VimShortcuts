@@ -22,10 +22,6 @@ end
 
 group :development do
     gem "web-console"
-
-    
-    
-
 end
 
 group :test do
@@ -33,7 +29,7 @@ group :test do
 
 end
 gem "sqlite3"
-gem "entity_store_sequel"
+gem "entity_store_sequel", require: true
 gem "hatchet", git: "https://github.com/cronofy/hatchet.git", branch: "master"
 gem "sassc-rails"
 gem "flipper"
