@@ -1,10 +1,18 @@
-<h1> 
-  Vim Shortcuts
-</h1>
+<h1>Vim Shortcuts</h1>
 
-<% @people.each do |name| %>
-
-<p>
-Hello <%= name %>!
-</p>
-<% end %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Action</th>
+        <th>At</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= @shortcut.name %></td>
+          <td><%= @shortcut.action %></td>
+          <td><%= @shortcut.at %></td>
+        </tr>
+    </tbody>
+  </table>
